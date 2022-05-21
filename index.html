@@ -1,49 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Fork Me! FCC: Test Suite Template</title>
-    <link rel="stylesheet" href="css/style.css" />
-  </head>
 
-  <body>
-    <div>
-      <h1 id="title">freeCodeCamp Survey Form</h1>
-      <p id="description">
-        Thank you for taking the time to help us improve the platform
-      </p>
-      <form id="survey-form">
+<head>
+  <meta charset="UTF-8" />
+  <title>Fork Me! FCC: Test Suite Template</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <div>
+    <h1 id="title">freeCodeCamp Survey Form</h1>
+    <p id="description">
+      Thank you for taking the time to help us improve the platform
+    </p>
+    <form id="survey-form">
+      <div class="form">
         <label id="name-label" for="name">Name</label>
-        <input
-          type="text"
-          name="name"
-          id="name"
-          class="form-control"
-          placeholder="Enter your name"
-          required=""
-        />
-        <label id="e-mail" for="e-mai">Enter your e-mail</label>
-        <input
-          type="e-mail"
-          name="e-mail"
-          id="e-mail"
-          class="form-control"
-          placeholder="Enter your e-mail"
-          required=""
-        />
-        <label id="number" for="age">age</label>
-        <input
-          type="number"
-          name="age"
-          id="number"
-          class="form-control"
-          placeholder="Enter your age"
-          required=""
-        />
-      </form>
-      <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+        <input type="text" name="name" id="name" class="form-control" placeholder="Enter your name" required="" />
+      </div>
+      <div class="form">
+        <label id="email-label" for="e-mail">E-mail</label>
+        <input type="email" name="e-mail" id="email" class="form-control" placeholder="Enter your e-mail" required="" />
+      </div>
+      <div class="form">
+        <label id="number-label" for="age">Age</label>
+        <input type="number" name="age" id="number" class="form-control" placeholder="Enter your age" required=""
+          min="0" max="99" />
+      </div>
 
-      <script src="js/index.js"></script>
-    </div>
-  </body>
+      <div class="form">
+        <p>Gender</p>
+        <select name="role" id="dropdown">
+          <option value="female">Female</option>
+          <option value="Male">Male</option>
+          <option value="Other">Other</option>
+        </select>
+      </div>
+
+      <div class="form">
+        <p>Would you recommend freeCodeCamp to a friend?</p>
+        <label>
+          <input name="user-recommend" value="definitely" type="radio" class="input-radio" checked>
+          "definitely" </label>
+        <label>
+          <input name="user-recommend" value="maybe" type="radio" class="input-radio">
+          "Maybe" </label>
+        <label>
+          <input name="user-recommend" value="not sure" type="radio" class="input-radio">
+          "Not Sure" </label>
+      </div>
+
+      <div class="form">
+        <p>Facilites You have?</p>
+        <label>
+          <input name="prefer" value="LAPTOP" type="checkbox" class="input-checkbox">
+          LAPTOP
+        </label>
+        <label>
+          <input name="prefer" value=" HEADPHONE" type="checkbox" class="input-checkbox">
+          HEADPHONE
+        </label>
+        <label>
+          <input name="prefer" value="ROUTER" type="checkbox" class="input-checkbox">
+          ROUTER
+        </label>
+        <label>
+          <input name="prefer" value=" QUIET WORKSPACE" type="checkbox" class="input-checkbox">
+          QUIET WORKSPACE
+        </label>
+        <label>
+          <input name="prefer" value="COMPUTER" type="checkbox" class="input-checkbox">
+          COMPUTER
+        </label>
+        <label>
+          <input name="prefer" value="SPEAKER" type="checkbox" class="input-checkbox">
+          SPEAKER
+        </label>
+
+      </div>
+
+      <div class="form">
+        <p>Please write your thoughts </p>
+        <textarea id="comments" class="input-textarea" name="comment"
+          placeholder="Enter your comment here..."></textarea>
+      </div>
+
+      <div class="form">
+        <button type="submit" id="submit" class="submit-button">
+          Submit
+        </button>
+      </div>
+    </form>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+
+    <script src="js/index.js"></script>
+  </div>
+</body>
+
 </html>
